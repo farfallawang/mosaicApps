@@ -34,12 +34,13 @@ Known bugs: Some transformations return NaNs and display an error in the
 console. The density plot does not plot those which are NaNs.
 }
 \examples{
-density()
+density() #if you do not want to display the code
+density(display = "showcase") #if you want to display the code
 }
 \author{
 Andrew Rich (\email{andrew.joseph.rich@gmail.com}) and Daniel
 Kaplan (\email{kaplan@macalester.edu})
-and MengdieWang(\email{mwang3@macalester.edu})
+, MengdieWang(\email{mwang3@macalester.edu})
 and Jingjing Yang(\email{jyang1@macalester.edu})
 }
 \keyword{statistics}
