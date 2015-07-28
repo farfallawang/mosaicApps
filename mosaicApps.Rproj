@@ -9,15 +9,9 @@ UseSpacesForTab: Yes
 NumSpacesForTab: 2
 Encoding: UTF-8
 
-<<<<<<< HEAD
 RnwWeave: Sweave
-LaTeX: pdfLaTeX
-=======
-RnwWeave: knitr
 LaTeX: pdfLaTeX
 
 BuildType: Package
 PackageUseDevtools: Yes
 PackageInstallArgs: --no-multiarch --with-keep.source
-PackageRoxygenize: rd,collate,namespace
->>>>>>> 826dde4711447fd83481d8a54e2ec557aba70f55
