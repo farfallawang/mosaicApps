@@ -32,8 +32,9 @@
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
 #' @examples
-#' bias()
-
+#' bias() #if you do not want to display the code
+#' bias(display = "showcase") #if you want to display the code
+#' 
 #' @export
 bias <- function(){
   appDir <- system.file("shinyApps","Bias",package = "mosaicApps")

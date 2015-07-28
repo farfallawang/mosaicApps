@@ -40,7 +40,8 @@ different with different terms in it. A confidence interval is only
 applicable to its own model or hypothesis test, it is not universally valid.
 }
 \examples{
-bias()
+bias() #if you do not want to display the code
+bias(display = "showcase") #if you want to display the code
 }
 \author{
 Andrew Rich (\email{andrew.joseph.rich@gmail.com})
