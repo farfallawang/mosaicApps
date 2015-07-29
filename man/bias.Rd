@@ -4,7 +4,7 @@
 \alias{bias}
 \title{Interactive applet to explore integrals as applied to economics}
 \usage{
-bias()
+bias(display = c("normal", "showcase"))
 }
 \arguments{
 \item{expr}{A model formula that is taken as the original model to be

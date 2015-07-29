@@ -51,9 +51,6 @@ fit(display = "showcase") #if you want to display the code
 \author{
 Andrew Rich (\email{andrew.joseph.rich@gmail.com}) and Daniel
 Kaplan (\email{kaplan@macalester.edu})
-
-Andrew Rich (\email{andrew.joseph.rich@gmail.com}) and Daniel
-Kaplan (\email{kaplan@macalester.edu})
 , MengdieWang(\email{mwang3@macalester.edu})
 and Jingjing Yang(\email{jyang1@macalester.edu})
 }
