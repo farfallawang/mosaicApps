@@ -14,7 +14,7 @@ phaseLine <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","phaseLine",package = "mosaicApps")
   if (appDir == ""){
-    stop("Could find example directory. Try reinstalling `mosaicApps`.",
+    stop("Couldn't find example directory. Try reinstalling `mosaicApps`.",
          call. = FALSE)
   }
   shiny::runApp(appDir, display.mode = display)

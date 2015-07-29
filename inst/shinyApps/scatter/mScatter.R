@@ -50,29 +50,5 @@ mScatter <- function(dat,Xaxis,Yaxis,Color,Facet,Size....) {
   
   print(scatter)      
 
-  
-#   mScatter <- function(dat) {
-#     df = substitute(dat)
-#     nm = varsByType(head(dat))
-#     # nm$q is the quantitative variables.
-#     snames <- NAprepend(nm$all)
-#     cnames <- NAprepend(nm$c)
-#     mnames <- list("none", linear="linear","smoother")
-#     manipulate({p<-doScatter(show,df,x=x,y=y,color=color,size=size,
-#                              facet=facet,logx=logx,logy=logy,model=model)},
-#                show = button("Show Expression"),
-#                x = picker(nm$q,initial=nm$q[[1]],label="x axis"),
-#                y = picker(nm$q,initial=nm$q[[2]],label="y axis"),
-#                color = picker(snames, initial="none ",label="Color"),
-#                size = picker(snames, initial="none ",label="Size"),
-#                facet = picker(cnames, initial="none ", label="Facet"),
-#                logx = checkbox(label="Log X-axis"),
-#                logy = checkbox(label="Log Y-axis"),
-#                model = picker(mnames, initial="none", label="Model")
-#     )
-#   }  
-#   
-
-
 }
 
