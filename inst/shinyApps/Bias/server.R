@@ -19,7 +19,7 @@ shinyServer(
       
       num <- input$n
       
-      origMod <<- lm(expr, data1) 
+      origMod <<- stats::lm(expr, data1) 
       origCoefs <<- coef(origMod)
       
       formula <- as.formula(input$expression) 

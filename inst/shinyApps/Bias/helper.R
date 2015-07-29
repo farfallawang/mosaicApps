@@ -12,7 +12,7 @@ myFun=function(n, seed, signif, use.orig, checks){
   else {scaleData = data.frame()}# Just the selected variables
   scaleData[["newname"]] = data1[[yvar]]
   #browser()
-  scaleCIs = confint(lm( newname ~ ., data=scaleData), signif=0.95) # always 0.95 for reference
+  scaleCIs = confint(stats::lm( newname ~ ., data=scaleData), signif=0.95) # always 0.95 for reference
   
   if (use.orig) {
     newData=data1
@@ -30,7 +30,7 @@ myFun=function(n, seed, signif, use.orig, checks){
   # foo=predict(origMod, newdata=newData)+newResids
   newData=newData[checks]
   newData[["newname"]]=foo
-  newMod=lm(newname ~., data=newData)    #newMod from newData with only selected terms
+  newMod=stats::lm(newname ~., data=newData)    #newMod from newData with only selected terms
   newCIs=confint(newMod,level=signif)
   limCIs=c(min(newCIs), max(newCIs))
   limCIs=c(min(newCIs)-.1*diff(range(limCIs)), max(newCIs)+.1*diff(range(limCIs)))

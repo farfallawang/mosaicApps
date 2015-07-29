@@ -16,17 +16,16 @@ shinyServer(
       # curIntercept <- mean(interceptRange)
       # slopeRange <- sort(coef(mod)[2]*c(-1,1.5))
       # curSlope <- 1
-      
       data <- datasets[[input$data]]
       formula <- as.formula(input$expr)
-      mod <- lm(formula, data=data)
+      mod <- stats::lm(formula, data=data)
       bestSlope <- coef(mod)[2]
       
       curSlope <- input$slope * bestSlope
       curIntercept <- input$inter
       # browser()
       
-      mod <- lm(formula, data=data)
+      mod <- stats::lm(formula, data=data)
       responseName <- deparse(mod$terms[[2L]])
       bestSlope <- coef(mod)[2]
       bestInter <- coef(mod)[1]
@@ -59,7 +58,7 @@ shinyServer(
           hlength <- hscale*abs(response[k] - modelVals[k])
           polygon( explanatory[k]+c(0,0,hlength,hlength),
                    c(response[k],modelVals[k],modelVals[k],response[k]),
-                   col="lightblue", border=NA)
+                   col=scales::alpha("lightblue", .3), border=NA)
         }
       } 
       

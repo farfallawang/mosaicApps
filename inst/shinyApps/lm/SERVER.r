@@ -18,7 +18,7 @@
         formula <- as.formula(input$expr)
         data <- datasets[[input$data]]
         
-        mod <- lm( formula, data=data)
+        mod <- stats::lm( formula, data=data)
         response.name <- deparse(mod$terms[[2L]])   #reponse.name <- formula[2]
         term.labels <- attr(mod$term, "term.labels")
         validate(need(xname %in% term.labels, "Please choose x variable properly")) #validation error
