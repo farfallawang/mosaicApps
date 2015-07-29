@@ -13,25 +13,20 @@
 #' random seed slider picks the random seed. Number of points chooses the
 #' number of points to be generated as data.
 #' 
-#' Known bugs: Some transformations return NaNs and display an error in the
-#' console. The density plot does not plot those which are NaNs.
+# Known bugs: Some transformations return NaNs and display an error in the
+# console. The density plot does not plot those which are NaNs.
 #' 
-#' @param data Numerical data to be used in the density plot. Only one variable
-#' of numerical data is allowed. If null, mDensity creates random data from the
-#' specified distribution.
-#' @return A function that allows the user to explore density plots and
-#' transformations on data interactively.
-#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}) and Daniel
-#' Kaplan (\email{kaplan@@macalester.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com})
+#' , Daniel Kaplan (\email{kaplan@@macalester.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
 #' @examples
-#' density() #if you do not want to display the code
-#' density(display = "showcase") #if you want to display the code
+#' densityApp() #if you do not want to display the code
+#' densityApp(display = "showcase") #if you want to display the code
 
 #' @export
-density <- function(display = c("normal","showcase")){
+densityApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","density",package = "mosaicApps")
   if (appDir == ""){

@@ -10,16 +10,12 @@
 #' optimal, least squares value.
 #' 
 #' @author Daniel Kaplan (\email{kaplan@@macalester.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
-#' @param form a model formula with a single, quantitative explanatory variable
-#' @param data  data frame containing the data for fitting
-#'
-#' @return nothing
 #' @keywords statistics
 #' @examples
-#' lineFit() #if you do not want to display the code
-#' lineFit(display = "showcase") #if you want to display the code
+#' lineFitApp() #if you do not want to display the code
+#' lineFitApp(display = "showcase") #if you want to display the code
 
 #' @export
 lineFit <- function(display = c("normal","showcase")){

@@ -16,30 +16,17 @@
 #' wrappers that select only the constant, x, and sines and cosines terms, the
 #' pnorm terms, and the polynomial terms, respectively.
 #' 
-#' @param expr A formula object giving the dependent and independent variables
-#' to use.
-#' @param data A data frame containing the values for the variables identified
-#' in \code{expr}.
-#' @param instructor A logical vector consisting of \code{TRUE} and
-#' \code{FALSE} that tells the program which checkboxes to display. The vector
-#' is length 13. The order of terms to which \code{instructor} corresponds is
-#' as follows: 1. constant 2. x 3. $x^2$ 4. $x^3$ 5. log(x) 6. exp(k*x) 7.
-#' pnorm1 8. pnorm2 9. pnorm3 10. pnorm4 11. pnorm5 12. sin(x) 13. cos(x)
-#' @param ... Extra arguments to be passed to the functions described in
-#' \code{instructor}. Mostly these will not be evaluated.
-#' @return A function that implements the current state of the parameters and
-#' terms selected.
-#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}) and Daniel
-#' Kaplan (\email{kaplan@@macalester.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}) 
+#' , Daniel Kaplan (\email{kaplan@@macalester.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords calculus
 #' @examples
-#' fit() #if you do not want to display the code
-#' fit(display = "showcase") #if you want to display the code
+#' fitApp() #if you do not want to display the code
+#' fitApp(display = "showcase") #if you want to display the code
 
 #' @export
-fit <- function(display = c("normal","showcase")){
+fitApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","fit",package = "mosaicApps")
   if (appDir == ""){

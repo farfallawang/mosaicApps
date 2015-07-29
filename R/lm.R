@@ -2,15 +2,15 @@
 #' 
 #' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}), Daniel Kaplan
 #' (\email{kaplan@@macalester.edu}), Randall Pruim (\email{rpruim@@calvin.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
 #' @examples
-#' lm() #if you do not want to display the code
-#' lm(display = "showcase") #if you want to display the code
+#' lmApp() #if you do not want to display the code
+#' lmApp(display = "showcase") #if you want to display the code
 
 #' @export
-lm <- function(display = c("normal","showcase")){
+lmApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","lm",package = "mosaicApps")
   if (appDir == ""){

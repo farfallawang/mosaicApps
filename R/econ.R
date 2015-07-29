@@ -17,21 +17,17 @@
 #' opposite sign However it's better for the exercise to be more flexible than
 #' less.
 #' 
-#' @param xlim The range of points to plot on the Quantity axis. By default, it
-#' is set to be c(0,20).
-#' @return A function that allows the user to explore integrals as applied to
-#' economics.
-#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}) and Daniel
-#' Kaplan (\email{kaplan@@macalester.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}) 
+#' , Daniel Kaplan (\email{kaplan@@macalester.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords economics
 #' @examples
-#' econ() #if you do not want to display the code
-#' econ(display = "showcase") #if you want to display the code
+#' econApp() #if you do not want to display the code
+#' econApp(display = "showcase") #if you want to display the code
 
 #' @export
-econ <- function(display = c("normal","showcase")){
+econApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","econ",package = "mosaicApps")
   if (appDir == ""){

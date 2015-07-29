@@ -6,14 +6,6 @@
 \usage{
 lineFit(display = c("normal", "showcase"))
 }
-\arguments{
-\item{form}{a model formula with a single, quantitative explanatory variable}
-
-\item{data}{data frame containing the data for fitting}
-}
-\value{
-nothing
-}
 \description{
 An interactive demonstration program for showing how the residuals
 and the sum of square residuals relates to the slope and intercept of a fitted
@@ -25,12 +17,12 @@ you can see how the sum of square residuals increases compared to the
 optimal, least squares value.
 }
 \examples{
-lineFit() #if you do not want to display the code
-lineFit(display = "showcase") #if you want to display the code
+lineFitApp() #if you do not want to display the code
+lineFitApp(display = "showcase") #if you want to display the code
 }
 \author{
 Daniel Kaplan (\email{kaplan@macalester.edu})
-, MengdieWang(\email{mwang3@macalester.edu})
+, Mengdie Wang(\email{mwang3@macalester.edu})
 and Jingjing Yang(\email{jyang1@macalester.edu})
 }
 \keyword{statistics}

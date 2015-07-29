@@ -21,22 +21,17 @@
 #' different with different terms in it. A confidence interval is only
 #' applicable to its own model or hypothesis test, it is not universally valid.
 #' 
-#' @param expr A model formula that is taken as the original model to be
-#' evaluated.
-#' @param data A dataset containing the terms in \code{expr}.
-#' @return A function that allows the user to explore bias in linear models
-#' with respect to confidence intervals and coefficients.
 #' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}) 
-#' and Daniel Kaplan (\email{kaplan@@macalester.edu}) 
-#' and MengdieWang(\email{mwang3@@macalester.edu})
+#' ,Daniel Kaplan (\email{kaplan@@macalester.edu}) 
+#' ,Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
 #' @examples
-#' bias() #if you do not want to display the code
-#' bias(display = "showcase") #if you want to display the code
+#' biasApp() #if you do not want to display the code
+#' biasApp(display = "showcase") #if you want to display the code
 #' 
 #' @export
-bias <- function(display = c("normal","showcase")){
+biasApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","bias",package = "mosaicApps")
   if (appDir == ""){

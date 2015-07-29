@@ -1,7 +1,6 @@
 #Dists to do:
 #Unif, t, F, CHI^2, normal, exponential, beta? MY CHOICE, random.
 
-
 #' Interactive applet to explore the standard deviation
 #' 
 #' A game where the user matches the standard deviation of the blue normal
@@ -24,19 +23,17 @@
 #' unknown distribution. This can be used for more focused lessons on specific
 #' distributions, practice, or curiosity.
 #' 
-#' @return A function that allows the user to explore standard deviations of
-#' different probability distributions.
 #' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}), Daniel Kaplan
 #' (\email{kaplan@@macalester.edu}), Randall Pruim (\email{rpruim@@calvin.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
 #' @examples
-#' sdGame() #if you do not want to display the code
-#' sdGame(display = "showcase") #if you want to display the code
+#' sdGameApp() #if you do not want to display the code
+#' sdGameApp(display = "showcase") #if you want to display the code
 
 #' @export
-sdGame <- function(display = c("normal","showcase")){
+sdGameApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","sdGame",package = "mosaicApps")
   if (appDir == ""){

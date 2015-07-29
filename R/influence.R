@@ -12,29 +12,17 @@
 #' The sliders' units are standard deviations from the mean. The type of
 #' influence picker is currently nonfunctional.
 #' 
-#' @param expr A formula object giving the dependent and independent variables
-#' to use.
-#' @param data A data frame containing the values for the variables identified
-#' in \code{expr}.
-#' @param groups A variable or expression to be evaluated in \code{data},
-#' expected to act as a grouping variable used to used to distinguish different
-#' groups by varying graphical parameters like color and plot symbol.
-#' @param col.fitted,col.influence colors to use for indicating influential
-#' points and fitted points.  Set to \code{'transparent'} to hid these
-#' elements.
-#' @param ... Additional arguments passed to \code{\link{xyplot}} to control
-#' the plotting.
 #' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}), Daniel Kaplan
 #' (\email{kaplan@@macalester.edu}), Randall Pruim (\email{rpruim@@calvin.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
 #' @examples
-#' influence() #if you do not want to display the code
-#' influence(display = "showcase") #if you want to display the code
+#' influenceApp() #if you do not want to display the code
+#' influenceApp(display = "showcase") #if you want to display the code
 
 #' @export
-influence <- function(display = c("normal","showcase")){
+influenceApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","influence",package = "mosaicApps")
   if (appDir == ""){

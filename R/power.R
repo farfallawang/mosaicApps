@@ -13,18 +13,18 @@
 #' reject the null hypothesis, they make a sound such as "ribbit". As power
 #' increases due to changes to n, mu, and sigma, ribbits increase.
 #' 
-#' @return A function that allows the user to explore power.
-#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com}) and Daniel
-#' Kaplan (\email{kaplan@@macalester.edu}),
-#' Homer White (\email{Homer_White@@georgetowncollege.edu})
-#' , MengdieWang(\email{mwang3@@macalester.edu})
+#' @author Andrew Rich (\email{andrew.joseph.rich@@gmail.com})
+#' , Daniel Kaplan (\email{kaplan@@macalester.edu})
+#' , Homer White (\email{Homer_White@@georgetowncollege.edu})
+#' , Mengdie Wang(\email{mwang3@@macalester.edu})
+#' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
 #' @examples
-#' power() #if you do not want to display the code
-#' power(display = "showcase") #if you want to display the code
+#' powerApp() #if you do not want to display the code
+#' powerApp(display = "showcase") #if you want to display the code
 
 #' @export
-power <- function(display = c("normal","showcase")){
+powerApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","power",package = "mosaicApps")
   if (appDir == ""){
