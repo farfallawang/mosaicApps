@@ -1,7 +1,11 @@
-shinyUI(fluidPage(
-  titlePanel("Visualizing a Linear Model"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("   "),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Visualizing a Linear Model"),
+  
+  tags$h4("..."),
   
   sidebarLayout(position = "right",
                 sidebarPanel(

@@ -3,10 +3,14 @@ library(mosaicData)
 
 data1 <<- get("CPS85")
 
-shinyUI(fluidPage(
-  titlePanel("Investigating Model Bias"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("This applet explore integrals as applied to economics."),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Investigating Model Bias"),
+  
+  tags$h4("This applet explore integrals as applied to economics."),
   
   sidebarLayout(position = "right",
                 

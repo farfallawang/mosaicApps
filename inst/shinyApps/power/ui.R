@@ -1,10 +1,14 @@
 library(shiny)
 
 
-shinyUI(fluidPage(
-  titlePanel("Power Test"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("An applet that shows power of a hypothesis (t) test"),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Power Test"),
+  
+  tags$h4("An applet that shows power of a hypothesis (t) test"),
   
   sidebarLayout(position = "right",
                 

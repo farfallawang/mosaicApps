@@ -6,11 +6,6 @@ shinyServer(function(input, output, session) {
   fun<-NULL
   seed<-NULL
   
-  if( ! require(mosaic))
-    stop("Must install mosaic package.")
-  if( !require(manipulate) ) 
-    stop("Must use a manipulate-compatible version of R, e.g. RStudio")
-  
   if( is.null(fun)) {
     if( is.null(seed)) seed <- round(runif(1,min=1,max=100000))
     fun <- rfun( ~x&y, seed=seed)

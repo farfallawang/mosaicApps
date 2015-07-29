@@ -1,9 +1,13 @@
 library(shiny)
 
-shinyUI(fluidPage(
-  titlePanel("Visualizing a Density Plot"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p(" Interactive applet for term selection and nonlinear parameters for fitting.
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Visualizing a Density Plot"),
+  
+  tags$h5(" Interactive applet for term selection and nonlinear parameters for fitting.
   Displays data and a menu of modeling functions.  Finds a linear combination
    of the selected modeling functions, with the user setting nonlinear
    parameters manually."),

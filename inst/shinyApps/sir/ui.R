@@ -1,9 +1,13 @@
 library(shiny)
  
-shinyUI(fluidPage(
-  titlePanel("SIR Model"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("Using the sliders, a user may control the probability of infection, the
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("SIR Model"),
+  
+  tags$h5("Using the sliders, a user may control the probability of infection, the
   number of contacts per day, duration of disease decay, the number of the initial population that is infected, and finally the number of births per
   day. With these parameters, the model can be substantially altered. For
   example, if the probability of infection is high and contact is high, the
@@ -17,7 +21,7 @@ shinyUI(fluidPage(
                 
     sidebarPanel( 
       sliderInput("probInfect", label = h4("Probability of Infection"),
-                  min = 0, max = 1, , step = 0.001, value = 0.1),
+                  min = 0, max = 1, step = 0.001, value = 0.1),
       
       br(),
 

@@ -1,10 +1,14 @@
 library(shiny)
 
 
-shinyUI(fluidPage(
-  titlePanel("Visualizing a Histogram"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("An applet which lets the user manipulate the number of bins and the center
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Visualizing a Histogram"),
+  
+  tags$h5("An applet which lets the user manipulate the number of bins and the center
     break of a histogram corresponding to a random normal distribution."),
   
   sidebarLayout(position = "right",

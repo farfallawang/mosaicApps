@@ -1,10 +1,14 @@
 library(shiny)
 
 
-shinyUI(fluidPage(
-  titlePanel("Supply and Demand"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("An applet that shows relationship between supply and demand"),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Supply and Demand"),
+  
+  tags$h4("An applet that shows relationship between supply and demand"),
   
   sidebarLayout(position = "right",
                 

@@ -2,7 +2,6 @@ library(shiny)
 library(mosaic)
 library(lattice)
 library(grid)
-source("mTaylor.R", local=TRUE)
 
 trans.blue <- rgb(0,0,1,.1) # least squares rectangle color
 rect.trans.blue <- rgb(0,0,1,.05)

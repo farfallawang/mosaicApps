@@ -1,9 +1,13 @@
 library(shiny)
 
-shinyUI(fluidPage(
-  titlePanel("Comparing different approximations"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("This applet displays a plot of a function, its Taylor series approximation,
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Comparing different approximations"),
+  
+  tags$h4("This applet displays a plot of a function, its Taylor series approximation,
     and a least squares approximation."),
   
   sidebarLayout(position = "right",

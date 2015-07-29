@@ -9,7 +9,6 @@ shinyServer(
   function(input, output, session) {
     source("mEcon.R", local=TRUE)
     
-    
     output$graph <- renderPlot({
       
       args <- list()

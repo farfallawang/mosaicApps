@@ -4,7 +4,6 @@
       
       # graphics function  function(xname,vec)
       ffun <- reactive({
-        #browser()
 # 
 #         isolate({input$expr})
 #         isolate({input$var_choices}) isolate not working 
@@ -82,17 +81,12 @@
       
       
       output$graph <- renderPlot({
-        #browser()
 #         isolate({input$expr})
 #         isolate({input$var_choices})
         p <- ffun()
         
         p
       })
-      
-      
-
-      
       
     })
   

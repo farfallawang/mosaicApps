@@ -4,10 +4,14 @@ library(shiny)
 maxeffect <<- 10
 resid <- 10
 
-shinyUI(fluidPage(
-  titlePanel("Hypothesis Test"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("This applet interactively displays hypothesis testing concepts. It allows the user to set various parameters that govern the sampling distribution, and the significance, then calculates the power."),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Hypothesis Test"),
+  
+  tags$h4("This applet interactively displays hypothesis testing concepts. It allows the user to set various parameters that govern the sampling distribution, and the significance, then calculates the power."),
   
   sidebarLayout(position = "right",
                 

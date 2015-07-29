@@ -1,8 +1,11 @@
-shinyUI(fluidPage(
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  titlePanel("Interactive applet to explore influential points in linear models"),
+  theme = shinytheme("cerulean"),
   
-  p("Displays data and a menu of modeling functions.  Finds a linear combination
+  tabPanel("Interactive applet to explore influential points in linear models"),
+  
+  tags$h5("Displays data and a menu of modeling functions.  Finds a linear combination
 of the selected modeling functions, with the user setting nonlinear
 parameters manually."),
   

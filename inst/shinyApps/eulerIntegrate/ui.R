@@ -1,9 +1,13 @@
 library(shiny)
 
-shinyUI(fluidPage(
-  titlePanel("Euler Integration Method"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("An applet which allows the user to explore the Euler method for numerical integration of ordinary differential equations "),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Euler Integration Method"),
+  
+  tags$h4("An applet which allows the user to explore the Euler method for numerical integration of ordinary differential equations "),
   
   sidebarLayout(position = "right",
                 

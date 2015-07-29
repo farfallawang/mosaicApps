@@ -1,10 +1,14 @@
 library(shiny)
 
 
-shinyUI(fluidPage(
-  titlePanel("Guessing the Standard Deviation!"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("Your goal to is to manipulate the blue curve (which is a
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Guessing the Standard Deviation!"),
+  
+  tags$h5("Your goal to is to manipulate the blue curve (which is a
     normal distribution) to try to match the standard deviation of the 
     red curve.  The default red distribution is a random distribution.
     However, you can set the red distribution to normal, uniform, 
@@ -15,7 +19,7 @@ shinyUI(fluidPage(
                 
     sidebarPanel( 
       sliderInput("sd", label = h4("Guess Standard Deviation"),
-                  min = 0.1, max = 5, , step = 0.1, value = 1),
+                  min = 0.1, max = 5,  step = 0.1, value = 1),
       
       br(),
 

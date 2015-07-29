@@ -3,10 +3,14 @@ library(shiny)
 
 x_limit <<- c(-.2,1.2)
 
-shinyUI(fluidPage(
-  titlePanel("Phase Line"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("...."),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Phase Line"),
+  
+  tags$h4("...."),
   
   sidebarLayout(position = "right",
                 

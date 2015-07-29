@@ -1,10 +1,14 @@
 library(shiny)
 
 
-shinyUI(fluidPage(
-  titlePanel("Visualizing a Density Plot"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("An applet which lets the user manipulate the bandwidth of a density plot and 
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Visualizing a Density Plot"),
+  
+  tags$h5("An applet which lets the user manipulate the bandwidth of a density plot and 
     apply different transformations to examine how density plots reflect smoothed
     data"),
   

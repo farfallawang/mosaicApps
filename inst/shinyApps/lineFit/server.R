@@ -23,7 +23,6 @@ shinyServer(
       
       curSlope <- input$slope * bestSlope
       curIntercept <- input$inter
-      # browser()
       
       mod <- stats::lm(formula, data=data)
       responseName <- deparse(mod$terms[[2L]])
@@ -66,11 +65,7 @@ shinyServer(
       points( explanatory, modelVals, pch=10, col="black") 
       points( explanatory, response, pch=20, col="blue")
       
-      
     })
-    
-    
-    
     
     output$graph <- renderPlot({
       
@@ -79,8 +74,6 @@ shinyServer(
       showPlot()
 
     })
-    
-    
     
   }
 )

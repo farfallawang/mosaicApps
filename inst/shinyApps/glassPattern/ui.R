@@ -3,10 +3,14 @@ library(shiny)
 npts <<- 3000
 seed <<- NULL
 
-shinyUI(fluidPage(
-  titlePanel("Glass Pattern"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("...."),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Glass Pattern"),
+  
+  tags$h4("...."),
   
   sidebarLayout(position = "right",
                 

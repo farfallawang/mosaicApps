@@ -1,12 +1,8 @@
 library(shiny)
 
-if( !require(manipulate)) stop("Must use a manipulate-compatible version of R, e.g. RStudio")
-if (!require("mosaic")) stop("Must install mosaic package.")
-
 shinyServer(
   function(input,output,session){
      .makeA <- function(xx) {
-      #browser()
       #Several changes made for this app:
       #Turn funchoice from a vector of TRUE AND FALSE into a checkbox group, and create a new funchoice that returns a logical object
        #indicating which functions have been selected

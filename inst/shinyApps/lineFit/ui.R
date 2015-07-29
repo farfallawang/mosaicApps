@@ -1,8 +1,11 @@
-shinyUI(fluidPage(
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  titlePanel("Interactive line-fitting application"),
+  theme = shinytheme("cerulean"),
   
-  p("An interactive demonstration program for showing how the residuals
+  tabPanel("Interactive line-fitting application"),
+  
+  tags$h5("An interactive demonstration program for showing how the residuals
       and the sum of square residuals relates to the slope and intercept of a fitted
       line.  There are sliders to modify the slope and intercept of the fitted
       line and checkboxes that control whether to display the residuals (as lines)

@@ -1,9 +1,13 @@
 library(shiny)
 
-shinyUI(fluidPage(
-  titlePanel("Gradient Search"),
+shinyUI(navbarPage(
+  "Project Mosaic!",
   
-  p("This is an applet for finding local extrema."),
+  theme = shinytheme("cerulean"),
+  
+  tabPanel("Gradient Search"),
+  
+  tags$h4("This is an applet for finding local extrema."),
   
   sidebarLayout(position = "right",
                 

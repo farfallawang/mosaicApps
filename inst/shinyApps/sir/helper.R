@@ -1,6 +1,6 @@
 myFun <- reactive({
- 
-# set up parameters  
+  
+  # set up parameters  
   ndays = 100
   dt = 0.1
   N = 1000
@@ -8,12 +8,11 @@ myFun <- reactive({
   p <- input$probInfect
   ncontact <- input$nContact
   gamma <- input$duration
-  Iinit <- input$initialI
   births <- input$birth
   
   npoints = ceiling( ndays/dt )
- 
-# build models
+  
+  # build models
   S <- rep(0, npoints)
   I <- rep(0, npoints)
   R <- rep(0, npoints)
@@ -36,9 +35,3 @@ myFun <- reactive({
   
 })
 
-
-# myFun <- function(probInfect, nContact, duration, initialI, births){
-#   dat <- sir()
-#   lattice::xyplot(S+I+R~t, data=dat, auto.key=list(points=FALSE, lines=TRUE, columns=3), lwd=lwd, type=type,
-#                   ...)
-# }

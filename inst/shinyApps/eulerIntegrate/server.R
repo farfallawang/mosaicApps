@@ -3,9 +3,7 @@ library(mosaic)
 library(lattice)
 library(grid)
 
-# 
-# if( !require(manipulate) ) 
-#   stop("Must use a manipulate-compatible version of R, e.g. RStudio")
+
 # tryCatch(.mEulerIntegrate.core(), 
 #           error=function(e){ 
 #             stop(paste(e,"Need newer version of RStudio", collapse="\n"))
@@ -21,7 +19,6 @@ trajectory <<- reactiveValues(
 shinyServer(
   function(input, output, session){
     dyn_fun <- reactive({
-#      browser()
       dynfunname <- input$dynfun
 # TO DO: PUT BACK THIS EDITING FUNCTIONALITY.  WILL NEED AN EDITABLE TEXT INPUT      
       
@@ -49,7 +46,6 @@ shinyServer(
       trajectory$one <<- list(x=input$xval0, t=0) #trajectory is the reactive value
     })
 
-    
     # ======================================
     
     observeEvent(input$ntraj, {
@@ -67,11 +63,9 @@ shinyServer(
     })
     
     
-    
     # =======================================
     # Calculates nstep more points in the trajectory
     observeEvent(input$go, {
-      #browser()
       dynfun <- dyn_fun()
       dt <- isolate(input$dt)
       for (k in 1:isolate(input$nsteps) ) {
@@ -85,7 +79,6 @@ shinyServer(
     # Calculate the equilibria
     # Plot them as needed in the renderPlot()
     equilibria_locations <- reactive({
-#      browser()
       dynfun <- dyn_fun()
       input$showeq
       return(c(0, .5, .7))
@@ -99,7 +92,6 @@ shinyServer(
     
     #================================
     draw.state <- reactive({
-      #browser()
       npts = length(traj_now$x)
       dynfun <- dyn_fun()
       #Figure out the time and x-scale
@@ -119,16 +111,13 @@ shinyServer(
         p <- p + geom_segment(x = traj_now$t[npts-1] - 3, xend = traj_now$t[npts-1] + 3 , 
                               y = traj_now$x[npts-1] - 3*slope , yend = traj_now$x[npts-1] + 3*slope, col = "black")
       }
-      
-
+ 
     })
     
 
    #============================================================== 
     output$graph <- renderPlot({
-     #browser()
       p <- draw.state()
-
       # Show the equilibria values
       if (input$showeq) {
         eq <- data.frame(x = equilibria_locations() )
@@ -138,7 +127,6 @@ shinyServer(
       p
       
     })  
-    
 
     
   }

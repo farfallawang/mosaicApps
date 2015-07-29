@@ -5,8 +5,6 @@ source("helper.R", local = TRUE)
 shinyServer(
   function(input, output, session) {
     
-    if( !require(manipulate) ) 
-      stop("Must use a manipulate-compatible version of R, e.g. RStudio")
     if(!is.null(seed)) set.seed(seed)
     
     output$graph <- renderPlot({
