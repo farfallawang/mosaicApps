@@ -8,9 +8,7 @@ shinyUI(navbarPage(
   
   tabPanel("Visualizing a Density Plot"),
   
-  tags$h5("An applet which lets the user manipulate the bandwidth of a density plot and 
-    apply different transformations to examine how density plots reflect smoothed
-    data"),
+  #includeMarkdown("density-explain.md"),
   
   sidebarLayout(position = "right",
                 

@@ -1,4 +1,4 @@
-#' Interactive applet to explore density plots
+#' Statistics app: Density plots and how they smooth data
 #' 
 #' An applet which lets the user manipulate the bandwidth of a density plot and
 #' apply different transformations to examine how density plots reflect

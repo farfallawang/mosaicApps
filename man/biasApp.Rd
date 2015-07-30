@@ -7,7 +7,7 @@
 biasApp(display = c("normal", "showcase"))
 }
 \description{
-An applet investigating model bias
+An app investigating model bias
 }
 \details{
 The original model is created from the original data set and the model given
