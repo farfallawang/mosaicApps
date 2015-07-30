@@ -26,9 +26,12 @@
 #' ,Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
+#' @param model_formula A formula describing the model to use as "reality"
+#' @param data_table The dataframe used to fit the model.
+#' @param display Whether to show the code behind the app.  Default: don't show it.
 #' @examples
-#' biasApp() #if you do not want to display the code
-#' biasApp(display = "showcase") #if you want to display the code
+#' biasApp(wage ~ age + educ, data=CPS85) 
+#' biasApp(wage ~ age, data = CPS85, display = "showcase") #if you want to display the code
 #' 
 #' @export
 biasApp <- function(model_formula, data=CPS85, display = c("normal","showcase")){
@@ -45,6 +48,6 @@ biasApp <- function(model_formula, data=CPS85, display = c("normal","showcase"))
     stop("Couldn't find example directory. Try reinstalling `mosaicApps`.",
          call. = FALSE)
   }
-  shiny::runApp(appDir, display.mode = "display")
+  shiny::runApp(appDir, display.mode = display)
 }
 

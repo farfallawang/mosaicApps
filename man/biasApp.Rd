@@ -6,6 +6,13 @@
 \usage{
 biasApp(model_formula, data = CPS85, display = c("normal", "showcase"))
 }
+\arguments{
+\item{model_formula}{A formula describing the model to use as "reality"}
+
+\item{display}{Whether to show the code behind the app.  Default: don't show it.}
+
+\item{data_table}{The dataframe used to fit the model.}
+}
 \description{
 An app investigating model bias
 }
@@ -30,8 +37,8 @@ different with different terms in it. A confidence interval is only
 applicable to its own model or hypothesis test, it is not universally valid.
 }
 \examples{
-biasApp() #if you do not want to display the code
-biasApp(display = "showcase") #if you want to display the code
+biasApp(wage ~ age + educ, data=CPS85)
+biasApp(wage ~ age, data = CPS85, display = "showcase") #if you want to display the code
 }
 \author{
 Andrew Rich (\email{andrew.joseph.rich@gmail.com})
