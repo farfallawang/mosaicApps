@@ -18,7 +18,7 @@
 #' lineFitApp(display = "showcase") #if you want to display the code
 
 #' @export
-lineFit <- function(display = c("normal","showcase")){
+lineFitApp <- function(display = c("normal","showcase")){
   display = match.arg(display)
   appDir <- system.file("shinyApps","lineFit",package = "mosaicApps")
   if (appDir == ""){
