@@ -2,7 +2,7 @@
 % Please edit documentation in R/bias.R
 \name{biasApp}
 \alias{biasApp}
-\title{Interactive applet to explore integrals as applied to economics}
+\title{Statistics app: Demonstrates changes in coefficients as model terms are added}
 \usage{
 biasApp(display = c("normal", "showcase"))
 }
