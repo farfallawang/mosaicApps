@@ -45,6 +45,6 @@ biasApp <- function(model_formula, data=CPS85, display = c("normal","showcase"))
     stop("Couldn't find example directory. Try reinstalling `mosaicApps`.",
          call. = FALSE)
   }
-  shiny::runApp(appDir, display.mode = "showcase")
+  shiny::runApp(appDir, display.mode = "display")
 }
 

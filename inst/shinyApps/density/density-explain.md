@@ -1,5 +1,3 @@
-THIS TO BE MOVED TO THE "EXPLAIN" TAB
-
 Density plots provide a "smooth" estimate of an empirical probability distribution, that is, a distribution defined by a data sample.  This app lets you generate a sample from any of several distributions and display both the individual data points and the smooth density distribution.
 
 THIS NEEDS UPDATING
