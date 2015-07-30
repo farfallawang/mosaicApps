@@ -1,11 +1,11 @@
-#' ggplot app: This is an applet that allows users to explore ggplot
+#' ggplot app: Allows users to explore ggplot
 #' 
 #' 
 #' @author :Daniel Kaplan (\email{kaplan@@macalester.edu}) 
 #' ,Mengdie Wang(\email{mwang3@@macalester.edu})
 #' and Jingjing Yang(\email{jyang1@@macalester.edu})
 #' @keywords statistics
-#' @example 
+#' @examples
 #' ggplotApp() 
 #' ggplotApp(display = "showcase") #if you want to display code
 #' 
