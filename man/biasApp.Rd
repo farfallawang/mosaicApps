@@ -4,7 +4,7 @@
 \alias{biasApp}
 \title{Statistics app: Demonstrates changes in coefficients as model terms are added}
 \usage{
-biasApp(display = c("normal", "showcase"))
+biasApp(model_formula, data = CPS85, display = c("normal", "showcase"))
 }
 \description{
 An app investigating model bias

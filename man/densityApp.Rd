@@ -2,7 +2,7 @@
 % Please edit documentation in R/density.R
 \name{densityApp}
 \alias{densityApp}
-\title{Interactive applet to explore density plots}
+\title{Statistics app: Density plots and how they smooth data}
 \usage{
 densityApp(display = c("normal", "showcase"))
 }

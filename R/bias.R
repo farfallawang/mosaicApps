@@ -31,7 +31,14 @@
 #' biasApp(display = "showcase") #if you want to display the code
 #' 
 #' @export
-biasApp <- function(display = c("normal","showcase")){
+biasApp <- function(model_formula, data=CPS85, display = c("normal","showcase")){
+  data_table <<- data
+  # Turn the formula into an editable string and find the response variable
+  formula_parts <- as.character(model_formula)
+  response_name <<- formula_parts[2]
+  formula_as_string <<- paste(model_formula[c(2,3)],collapse=" ~ ")
+    
+  
   display = match.arg(display)
   appDir <- system.file("shinyApps","bias",package = "mosaicApps")
   if (appDir == ""){

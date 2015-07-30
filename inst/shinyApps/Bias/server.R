@@ -6,7 +6,7 @@ library(grid)
 library(mosaicData)
 source("helper.R", local = TRUE)
 
-data1 <<- get("CPS85")
+data1 <<- data_table # get("CPS85")
 
 shinyServer(
   function(input, output, session) {

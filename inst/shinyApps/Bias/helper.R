@@ -1,4 +1,4 @@
-data1 <<- get("CPS85")
+data1 <<- data_table #get("CPS85")
 
 #=============================myFun Starts!
 myFun=function(n, seed, signif, use.orig, checks){
