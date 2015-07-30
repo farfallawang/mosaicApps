@@ -4,7 +4,7 @@ Version: 0.1
 Date: 2015-07-28
 Authors@R: person("Mengdie", "Wang", email = "mwang3@macalester.edu", role = c("aut", "cre"))
 Description: What the package does (one paragraph)
-Depends: R (>= 3.2.1), mosaic, shinythemes
+Depends: R (>= 3.0), mosaic, shinythemes
 Uses: stats
 Imports: shiny, mosaicData
 License: GPL-3
