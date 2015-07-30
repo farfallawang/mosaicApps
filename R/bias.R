@@ -1,6 +1,6 @@
-#' Interactive applet to explore integrals as applied to economics
+#' Statistics app: Demonstrates changes in coefficients as model terms are added
 #' 
-#' An applet investigating model bias
+#' An app investigating model bias
 #' 
 #' The original model is created from the original data set and the model given
 #' by \code{expr}. The response variable is taken to be the term on the left

@@ -8,9 +8,8 @@ shinyUI(navbarPage(
   
   theme = shinytheme("cerulean"),
   
-  tabPanel("Investigating Model Bias"),
-  
-  tags$h4("This applet explore integrals as applied to economics."),
+  tabPanel("Investigating Model Bias",
+
   
   sidebarLayout(position = "right",
                 
@@ -35,9 +34,12 @@ shinyUI(navbarPage(
                 
                 mainPanel(
                   br(),
-                  br(),
-                  plotOutput("graph")
+                  br()
+                  #plotOutput("graph")
                 )
-  )
+  )),
+  tabPanel("Explanation",
+           includeMarkdown("bias-explain.md"))
   
-  ))
+  )
+)
