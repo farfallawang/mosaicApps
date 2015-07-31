@@ -6,7 +6,6 @@ chooseDist <- reactive({
   
   dist = input$dist
   
-#   browser()
   if(dist==0){#mychoice, random
     dist=sample(1:4, 1)
   }
@@ -56,8 +55,6 @@ chooseDist <- reactive({
   return(distFun)
   
 })
-
-
 
 myFun=function(guess.sd, myDist, sol, nxt){  
   percent.off = abs((guess.sd-act.sd)/act.sd)*100

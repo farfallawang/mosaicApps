@@ -22,6 +22,11 @@ shinyServer(
   
   function(input, output, session) {
     source("mSDGame.R", local=TRUE)
+    
+    observeEvent(input$nxt, {
+        updateCheckboxInput(session = session, inputId = "sol", value = FALSE)
+      })
+
     output$graph <- renderPlot({
       
       args <- list()
