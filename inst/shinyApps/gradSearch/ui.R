@@ -10,7 +10,7 @@ shinyUI(navbarPage(
            column(8, 
                   tabsetPanel(
                     tabPanel("Graphical Output",
-                             plotOutput("graph")
+                             plotOutput("graph", click = "user")
                     ),
                     tabPanel("Explanation",
                              includeMarkdown("gradSearch-explain.md")))
